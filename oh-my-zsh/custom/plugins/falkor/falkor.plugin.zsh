@@ -296,8 +296,29 @@ man() {
         man "$@"
 }
 
-# TaskWarrior
-alias t='task list'
+# --------------------------
+# TaskWarrior / TimeWarrior
+# --------------------------
+alias t="task"
+# TimeWarrior helpers
+alias tw="timew"
+alias ts="timew summary :ids"
+__timew_action() {
+  local action="$1";       shift
+  local start_or_end="$1"; shift
+  local index="$1";        shift
+  [[ "${index}" =~ ^[0-9] ]] && index="@${index}"
+  echo "=> running: timew ${action} ${start_or_end} ${index} $@"
+  echo timew ${action} ${start_or_end} ${index} $@
+  echo "=> new TimeWarrior summary"
+  timew summary :ids
+}
+tmstart() { __timew_action "modify" "start" $@ }
+tmend()   { __timew_action "modify" "end"   $@ }
+tmove()   { __timew_action "move" ""   $@ }
+
+
+
 
 # ---------------
 # Emacs business
