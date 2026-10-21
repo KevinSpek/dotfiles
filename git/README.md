@@ -69,5 +69,5 @@ Consider these resources to become more familiar (if not yet) with Git:
 * [Simple Git Guide](http://rogerdudler.github.io/git-guide/)
 * [Git book](http://book.git-scm.com/index.html)
 * [Github:help](http://help.github.com/mac-set-up-git/)
-* [Git reference](http://gitref.org/)
+* [Git commands explained](https://coddy.tech/git-commands)
 * [Git Cheat Sheet](https://training.github.com/kit/downloads/github-git-cheat-sheet.pdf) proposed on Github.
